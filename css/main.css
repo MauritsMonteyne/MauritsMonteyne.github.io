@@ -1,0 +1,198 @@
+body {
+    /* background-color: #171717; */
+    background: linear-gradient(45deg, #57003f 0%,#f57453 100%);
+    color: #aaa;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Window bar */
+#window-bar {
+    background: linear-gradient(#504b45 0%,#3c3b37 100%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    margin-top: 5vh;
+    width: 50%;
+    color: white;
+    font-family: "Lucida Console";
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Terminal */
+#term-container {
+    width: 50%;
+    padding: 16px;
+    background-color: #171717;
+    height: 80vh;
+    overflow-y: scroll;
+
+    /* TODO: move to window? */
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 5vh;
+}
+
+
+#term-banner {
+    color: turquoise;
+    text-shadow: 0 0 5px turquoise;
+    line-height: normal;
+    font-weight: bold;
+    font-size: 1vw;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+#term-input {
+    width: 90%;
+    color: #aaa;
+    border: 0px;
+    background: transparent;
+    outline: none;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.term-output {
+    margin-inline-start: 20px;
+}
+
+
+.term-error {
+    color: red;
+}
+
+dl {
+    list-style-type: circle;
+}
+
+dt {
+    color: #eee;
+    text-shadow: 0 0 4px #eee;
+}
+
+dd {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: grey;
+    text-shadow: 0 0 5px grey;
+}
+
+.glow-white {
+    color: #eee;
+    text-shadow: 0 0 4px #eee;
+}
+
+.glow-green {
+    color: rgb(0, 222, 18);
+    text-shadow: rgb(0 222 18) 0px 0px 5px;
+}
+
+.glow-light-green {
+    color: rgb(153, 209, 0);
+    text-shadow: rgb(153 209 0) 0px 0px 5px;
+}
+
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end 3.5s;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100%; border-right: 0}
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+
+
+
+/* Media queries */
+@media only screen and (max-width: 1200px) {
+    #term-container {
+        width: 75%;
+    }
+
+    #window-bar {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: none;
+        background-color: #171717;
+    }   
+
+    #term-container {
+        width: 100%;
+        box-shadow: none;
+        border-radius: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 100%;
+        overflow-y: unset;
+    }
+
+    #window-bar {
+        display: none;
+    }
+    
+}
+
+
+/* Custom Scrollbar */
+/* width */
+#term-container::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  /* Track */
+#term-container::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 10px #f1f1f1;
+    border: solid 3px transparent;
+  }
+   
+  /* Handle */
+#term-container::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 10px #999;
+    border: solid 3px transparent;
+}
+  
+  /* Handle on hover */
+#term-container::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0 0 10px 10px #777;
+}
