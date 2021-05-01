@@ -94,6 +94,10 @@ a {
     text-shadow: 0 0 5px grey;
 }
 
+p {
+    text-align: justify;
+}
+
 .glow-white {
     color: #eee;
     text-shadow: 0 0 4px #eee;

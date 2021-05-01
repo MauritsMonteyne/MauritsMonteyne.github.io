@@ -34,11 +34,6 @@ class Terminal {
                 new Skill('Windows Server', 75), new Skill('SQL', 75),
                 new Skill('Cisco IOS', 70),
             ]),
-            // new Skill('Java', 90), new Skill('Python', 80), 
-            // new Skill('Javascript', 75), new Skill('C#', 70),
-            // new Skill('HTML5 / CSS3', 70), new Skill('Linux', 85),
-            // new Skill('Windows Server', 75), new Skill('SQL', 75),
-            // new Skill('Cisco IOS', 70),
         ];
         this.commands = {
             'about': 'Info over mij',
@@ -69,9 +64,6 @@ class Terminal {
                 break;
             case 'about':
                 output.appendChild(this.getAboutOverview())
-                break;
-            case 'contact':
-                // TODO: ???
                 break;
             case 'skills':
                 output.appendChild(this.getSkillsOverview())
@@ -122,11 +114,23 @@ class Terminal {
 
     getAboutOverview() {
         const div = document.createElement('div');
+        const p0 = document.createElement('p');
         const p1 = document.createElement('p');
-        p1.innerHTML = 'Mijn naam is <span class="glow-white">Maurits Monteyne</span> en ben een student <span class="glow-white">Toegepaste Informatica</span> aan Hogent.';
+        const p2 = document.createElement('p');
+        const p3 = document.createElement('p');
 
+        p0.innerHTML = 'Hallo, mijn naam is <span class="glow-white">Maurits Monteyne</span>.';
 
+        p1.innerHTML = 'Ik ben een gemotiveerde IT student die momenteel een opleiding Toegepaste Informatica aan Hogent volgt. Binnen de opleiding ligt mijn focus voornamelijk op IT-Operations, maar ook op het vlak van Software Development heb ik zeer goeie basis.';
+
+        p2.innerHTML = 'Als persoon kan ik mezelf het best omschrijven als een rustig en geduldig iemand die zowel goed zelfstandig als in groep kan werken. Verder leer ik graag nieuwe dingen bij, zowel binnen IT als er buiten, en hou ik ook wel van een uitdaging.';
+
+        p3.innerHTML = 'Via onderstaande link kun je mij contacteren op LinkedIn.'
+
+        div.appendChild(p0);
         div.appendChild(p1);
+        div.appendChild(p2);
+        div.appendChild(p3);
 
 
 
@@ -162,6 +166,25 @@ class Terminal {
         p1.innerHTML = 'Ik heb momenteel geen projecten publiek staan.';
 
         div.appendChild(p1);
+
+        // TODO: Show Github link or not?
+        // const descList = document.createElement('dl');
+        // const cName = document.createElement('dt');
+        // cName.textContent = 'Github';
+
+        // const cDesc = document.createElement('dd');
+        // const a = document.createElement('a');
+        // a.href = this.contactLinks.Github;
+        // a.textContent = this.contactLinks.Github;
+        // a.target= '_blank';
+
+        // cDesc.appendChild(a);
+
+        // descList.appendChild(cName);
+        // descList.appendChild(cDesc);
+
+        // div.appendChild(descList);
+
 
         return div;
     }
@@ -263,6 +286,7 @@ const init = function () {
             console.log(command);
         }
 
+        // TODO: fix command history
         // if (event.key === 'ArrowUp') {
 
         //     if (commandHistory[historyIndex + 1] !== undefined) {
