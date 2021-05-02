@@ -119,13 +119,13 @@ class Terminal {
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
 
-        p0.innerHTML = 'Hallo, mijn naam is <span class="glow-white">Maurits Monteyne</span>.';
+        p0.innerHTML = 'Hallo, ik ben <span class="glow-white">Maurits Monteyne</span>.';
 
         p1.innerHTML = 'Ik ben een gemotiveerde IT student die momenteel een opleiding Toegepaste Informatica aan Hogent volgt. Binnen de opleiding ligt mijn focus voornamelijk op IT-Operations, maar ook op het vlak van Software Development heb ik zeer goeie basis.';
 
-        p2.innerHTML = 'Als persoon kan ik mezelf het best omschrijven als een rustig en geduldig iemand die zowel goed zelfstandig als in groep kan werken. Verder leer ik graag nieuwe dingen bij, zowel binnen IT als er buiten, en hou ik ook wel van een uitdaging.';
+        p2.innerHTML = 'Verder kan ik mezelf het best omschrijven als een rustig en geduldig persoon die zowel goed zelfstandig als in groep kan werken. Daarnaast leer ik altijd graag nieuwe dingen bij, zowel binnen IT als er buiten, en hou ik ook wel van een uitdaging.';
 
-        p3.innerHTML = 'Via onderstaande link kun je mij contacteren op LinkedIn.'
+        p3.innerHTML = 'Via onderstaande links kun je mij contacteren op LinkedIn of eens kijken naar mijn Github repositories.'
 
         div.appendChild(p0);
         div.appendChild(p1);
@@ -268,6 +268,11 @@ const init = function () {
     const termPrompt = document.getElementById('term-prompt')
 
     const terminal = new Terminal();
+
+    // Keep focus on input field
+    document.getElementById('container').onclick = (evt) => {
+        termInput.focus();
+    }
 
     termInput.focus();
 
