@@ -25,14 +25,20 @@ class Terminal {
     constructor() {
         this.skills = [
             new SkillGroup('Development', [
-                new Skill('Java', 90), new Skill('Python', 80), 
-                new Skill('Javascript', 75), new Skill('C#', 70),
-                new Skill('HTML5 / CSS3', 70)
+                new Skill('Java', 90), 
+                new Skill('Python', 80), 
+                new Skill('Javascript', 75), 
+                new Skill('C#', 70),
+                new Skill('HTML5 / CSS3', 70),
+                new Skill('Kotlin', 70)
             ]),
             new SkillGroup('IT Operations', [
                 new Skill('Linux', 85),
-                new Skill('Windows Server', 75), new Skill('SQL', 75),
+                new Skill('Windows Server', 75), 
+                new Skill('SQL', 75),
                 new Skill('Cisco IOS', 70),
+                new Skill('Docker', 80),
+                new Skill('Network technologies', 70)
             ]),
         ];
         this.commands = {
@@ -121,9 +127,9 @@ class Terminal {
 
         p0.innerHTML = 'Hallo, ik ben <span class="glow-white">Maurits Monteyne</span>.';
 
-        p1.innerHTML = 'Ik ben een gemotiveerde IT student die momenteel een opleiding Toegepaste Informatica aan Hogent volgt. Binnen de opleiding ligt mijn focus voornamelijk op IT-Operations, maar ook op het vlak van Software Development heb ik zeer goeie basis.';
+        p1.innerHTML = 'Ik ben een gemotiveerde student Toegepaste Informaticaaan Hogent die momenteel in zijn laatste jaar zit. Binnende opleiding ligt mijn focus hoofdzakelijk op systeem -ennetwerkbeheer, maar daarnaast volg ik ook Androiddevelopment omdat software development mij enorminteresseert.';
 
-        p2.innerHTML = 'Verder kan ik mezelf het best omschrijven als een rustig en geduldig persoon die zowel goed zelfstandig als in groep kan werken. Daarnaast leer ik altijd graag nieuwe dingen bij, zowel binnen IT als er buiten, en hou ik ook wel van een uitdaging.';
+        p2.innerHTML = 'Mezelf kan ik het best omschrijven als een rustig engeduldig persoon met een passie voor het oplossen vanproblemen en het verbeteren van processen. Verder benik steeds benieuwd hoe dingen werken en leer ik graagnieuwe zaken bij, dit zowel binnen IT als er buiten.';
 
         p3.innerHTML = 'Via onderstaande links kun je mij contacteren op LinkedIn of eens kijken naar mijn Github repositories.'
 
